@@ -35,12 +35,12 @@ The second value passed to the env function is the "default value". This value w
 <b>Determining The Current Environment:</b>
 
 <code>
- $environment = app()->environment();
+ $environment = app()->environment();</code>
 
-if (app()->environment('local')) {
+<code>if (app()->environment('local')) {
     // The environment is local
-}
-
+}</code>
+<code>
 if (app()->environment('local', 'staging')) {
     // The environment is either local OR staging...
 }
