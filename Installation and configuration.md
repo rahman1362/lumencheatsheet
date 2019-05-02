@@ -1,7 +1,7 @@
 # lumencheatsheet
 Cheatsheet of Lumen framework
 
-Installing Lumen:
+<h3>Installing Lumen:</h3>
 composer global require "laravel/lumen-installer"
 lumen new blog
 
