@@ -1,36 +1,38 @@
 # lumencheatsheet
 Cheatsheet of Lumen framework
 
-<h3>Installing Lumen:</h3>
-composer global require "laravel/lumen-installer"
-lumen new blog
+<h2>Installing Lumen:</h2>
+<code>composer global require "laravel/lumen-installer"
+lumen new blog</code>
 
-Serving Your Application:
-php -S localhost:8000 -t public
+<h3>Serving Your Application:</h3>
 
-Configuration:
+<code>php -S localhost:8000 -t public</code>
 
-Accessing Configuration Values:
+<h2>Configuration:</h2>
+
+<h3>Accessing Configuration Values:</h3>
 The configuration values may be accessed using "dot" syntax, which includes the name of the file and option you wish to access
-$value = config('app.locale');
+<code>$value = config('app.locale');</code>
 
 To set configuration values at runtime, pass an array to the config helper:
-config(['app.locale' => 'en']);
+<code>config(['app.locale' => 'en']);</code>
 
 Before a configuration file can be used, you should load it into the application using the configure method. This may be done within your bootstrap/app.php file:
-$app->configure('app');
 
-Environment Configuration:
+<code>$app->configure('app');</code>
+
+<h4>Environment Configuration:</h4>
 
 The env function may be used to retrieve the values of your environment variables:
 
-$debug = env('APP_DEBUG', true);
+<code>$debug = env('APP_DEBUG', true);</code>
 
 The second value passed to the env function is the "default value". This value will be used if no environment variable exists for the given key.
 
-Determining The Current Environment:
+<b>Determining The Current Environment:</b>
 
-$environment = app()->environment();
+<code>$environment = app()->environment();
 
 if (app()->environment('local')) {
     // The environment is local
@@ -39,6 +41,6 @@ if (app()->environment('local')) {
 if (app()->environment('local', 'staging')) {
     // The environment is either local OR staging...
 }
-
+</code>
 
 
