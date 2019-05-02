@@ -13,9 +13,11 @@ lumen new blog</code>
 
 <h3>Accessing Configuration Values:</h3>
 The configuration values may be accessed using "dot" syntax, which includes the name of the file and option you wish to access
+
 <code>$value = config('app.locale');</code>
 
 To set configuration values at runtime, pass an array to the config helper:
+
 <code>config(['app.locale' => 'en']);</code>
 
 Before a configuration file can be used, you should load it into the application using the configure method. This may be done within your bootstrap/app.php file:
@@ -32,7 +34,8 @@ The second value passed to the env function is the "default value". This value w
 
 <b>Determining The Current Environment:</b>
 
-<code>$environment = app()->environment();
+<code>
+ $environment = app()->environment();
 
 if (app()->environment('local')) {
     // The environment is local
